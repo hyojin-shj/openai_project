@@ -22,7 +22,7 @@ class Translator:
                 {"role": "system", "content": "You will be provided with a sentence in English, and your task is to translate it into Korean"},
                 {"role": "user", "content": english_sentence}
             ],
-            temperature=0.7,
+           temperature=0.7,
             max_tokens=64,
             top_p=1
         )
