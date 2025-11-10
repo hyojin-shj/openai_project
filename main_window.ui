@@ -51,6 +51,11 @@
          <string>file_search</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>rudebot</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
@@ -65,7 +70,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -270,6 +275,51 @@
       </layout>
      </widget>
      <widget class="QTextEdit" name="translate_result_view_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>300</y>
+        <width>631</width>
+        <height>361</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>봇에게 질문을 해주세요!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="rudebot_input_2">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="rudebot_btn_2">
+         <property name="text">
+          <string>답변 생성</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextEdit" name="translate_result_view_3">
       <property name="geometry">
        <rect>
         <x>0</x>
