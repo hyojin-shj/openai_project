@@ -46,6 +46,11 @@
          <string>tts</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>file_search</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
@@ -60,7 +65,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -81,7 +86,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="poem_topic_input"/>
+        <widget class="QLineEdit" name="poem_topic_input">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="poem_generate_btn">
@@ -198,28 +207,77 @@
        <item>
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>오디오 파일의 경로를 입력하거나, 찾아보기 버튼을 사용하여 파일을 선택하세요</string>
+          <string>오디오 파일의 경로를 입력하세요. </string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="audio_source_input"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="audio_btowse_btn">
+        <widget class="QLineEdit" name="audio_source_input">
          <property name="text">
-          <string>Browse</string>
+          <string>오디오 경로를 입력하세요</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="audio_note_btn">
          <property name="text">
-          <string>노트 생성</string>
+          <string>오디오 회의 요약 노트 생성</string>
          </property>
         </widget>
        </item>
       </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>분석할 파일 경로를 입력하고, 파일에 관련된 질문을 작성해주세요.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="file_input">
+         <property name="text">
+          <string>파일 경로를 입력하세요</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="user_input">
+         <property name="text">
+          <string>파일 내에 질문사항을 입력해주세요</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="file_btn">
+         <property name="text">
+          <string>답변 생성</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextEdit" name="translate_result_view_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>300</y>
+        <width>631</width>
+        <height>361</height>
+       </rect>
+      </property>
      </widget>
     </widget>
    </widget>

@@ -4,6 +4,7 @@ import traceback
 import requests
 from docx import Document
 
+from filesearch.file import run_file_search  # ✅ 추가
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5.QtCore import QObject, QThread, pyqtSignal
 from PyQt5.QtGui import QPixmap
@@ -147,6 +148,7 @@ class MainWindow(QMainWindow):
         self.ui.translate_btn.clicked.connect(self.translate_text)
         self.ui.image_generate_btn.clicked.connect(self.generate_image)
         self.ui.audio_note_btn.clicked.connect(self.generate_audio_note)
+        self.ui.file_btn.clicked.connect(self.handle_file_search)
 
         self.show()
 
@@ -275,6 +277,26 @@ class MainWindow(QMainWindow):
         self.ui.audio_source_input.setText(f"오류 발생: {error_msg}")
         self.ui.audio_note_btn.setEnabled(True)
 
+# --- 파일 분석 (page5) ---
+    def handle_file_search(self):
+        file_path = self.ui.file_input.text()
+        question = self.ui.user_input.text()
+
+        if not file_path or not question:
+            self.ui.translate_result_view_2.setText("파일 경로와 질문을 모두 입력해주세요.")
+            return
+
+        self.ui.translate_result_view_2.setText("파일 분석 중입니다... 잠시만 기다려주세요.")
+        QApplication.processEvents() 
+
+        try:
+            result_text = run_file_search(file_path, question, self.client)
+            self.ui.translate_result_view_2.setText(result_text)
+
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            self.ui.translate_result_view_2.setText(f"오류 발생: {e}")
 
 if __name__ == "__main__":
     import sys
