@@ -364,6 +364,29 @@ QTextEdit, QTextBrowser {
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLabel" name="audio_status_label">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="audio_output_view">
+         <property name="minimumHeight">
+          <number>120</number>
+         </property>
+         <property name="maximumHeight">
+          <number>200</number>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </widget>

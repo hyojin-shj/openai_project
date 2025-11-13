@@ -1,8 +1,9 @@
 import traceback
 from docx import Document
 from PyQt5.QtCore import QObject, pyqtSignal
+import os
 
-# --- Audio Worker ---
+
 class AudioWorker(QObject):
     finished = pyqtSignal(dict, str)
     error = pyqtSignal(str)
@@ -22,7 +23,17 @@ class AudioWorker(QObject):
                     response_format="text"
                 )
 
-            transcription_text = transcript.text
+            # transcript가 객체일 수도 있고, 문자열일 수도 있으므로 모두 처리
+            if hasattr(transcript, "text"):
+                transcription_text = transcript.text
+            else:
+                transcription_text = str(transcript)
+
+            # 출력 경로의 디렉토리가 없으면 생성
+            output_dir = os.path.dirname(self.output_filename)
+            if output_dir and not os.path.exists(output_dir):
+                os.makedirs(output_dir, exist_ok=True)
+
             notes = {
                 "abstract_summary": self.abstract_summary_extraction(transcription_text),
                 "key_points": self.key_points_extraction(transcription_text),

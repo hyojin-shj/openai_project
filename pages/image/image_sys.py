@@ -7,9 +7,9 @@ class ImagePage:
     def __init__(self, ui, client):
         self.ui = ui
         self.client = client
-
         self.thread = None
-        self.worker = None 
+        self.worker = None
+
         self.ui.image_generate_btn.clicked.connect(self.generate_image)
 
     def generate_image(self):
@@ -26,7 +26,7 @@ class ImagePage:
         self.ui.image_display_label.setText("이미지 생성 중...")
 
 
-        self.thread = QThread(self.ui)
+        self.thread = QThread()
         self.worker = ImageWorker(self.client, prompt)
         self.worker.moveToThread(self.thread)
 
@@ -40,15 +40,6 @@ class ImagePage:
 
         self.thread.start()
 
-    def _cleanup_thread(self):
-        if self.thread is not None:
-            self.thread.quit()
-            self.thread.wait()
-            self.thread = None
-
-        self.worker = None
-        self.ui.image_generate_btn.setEnabled(True)
-
     def handle_result(self, url):
         try:
             img_data = requests.get(url).content
@@ -60,3 +51,15 @@ class ImagePage:
 
     def handle_error(self, e):
         self.ui.image_display_label.setText(f"오류 발생: {e}")
+
+    def _cleanup_thread(self, *args):
+        if self.thread is not None and self.thread.isRunning():
+            self.thread.quit()
+            self.thread.wait()
+
+        if self.worker is not None:
+            self.worker.deleteLater()
+            self.worker = None
+
+        self.thread = None
+        self.ui.image_generate_btn.setEnabled(True)
