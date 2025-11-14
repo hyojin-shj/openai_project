@@ -6,6 +6,7 @@ class FilesearchPage:
     def __init__(self, ui, client):
         self.ui = ui
         self.client = client
+        self.vector_store_id = self.client.vector_stores.create(name="file_search_store").id
 
         self.thread = None 
         self.worker = None
@@ -27,7 +28,7 @@ class FilesearchPage:
         self.ui.translate_result_view_2.setText("파일 분석 중입니다...")
 
         self.thread = QThread()
-        self.worker = FileWorker(self.client, file_path, question)
+        self.worker = FileWorker(self.client, file_path, question, self.vector_store_id)
         self.worker.moveToThread(self.thread)
 
         self.thread.started.connect(self.worker.run)
