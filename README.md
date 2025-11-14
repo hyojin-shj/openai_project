@@ -1,3 +1,5 @@
+![openai_project_시연 동영상-VEED](https://github.com/user-attachments/assets/41e898d8-0c5e-4472-9203-496540c9e6d1)
+
 <img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/6116e060-1c50-4ae2-91c1-693922b956f2" />
 <img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/93b25966-3946-408e-b4fe-bd66a185ecc3" />
 <img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/f897597e-5c7a-4ee5-800a-e87440f91691" />
