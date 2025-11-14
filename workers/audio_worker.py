@@ -23,13 +23,11 @@ class AudioWorker(QObject):
                     response_format="text"
                 )
 
-            # transcript가 객체일 수도 있고, 문자열일 수도 있으므로 모두 처리
             if hasattr(transcript, "text"):
                 transcription_text = transcript.text
             else:
                 transcription_text = str(transcript)
 
-            # 출력 경로의 디렉토리가 없으면 생성
             output_dir = os.path.dirname(self.output_filename)
             if output_dir and not os.path.exists(output_dir):
                 os.makedirs(output_dir, exist_ok=True)

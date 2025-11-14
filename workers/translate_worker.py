@@ -1,9 +1,8 @@
-# worker/translate_worker.py
 from PyQt5.QtCore import QObject, QThread, pyqtSignal
 import traceback
 
 class TranslateWorker(QObject):
-    finished = pyqtSignal(str)      # 번역된 결과 text
+    finished = pyqtSignal(str)
     error = pyqtSignal(Exception)
 
     def __init__(self, client, text):

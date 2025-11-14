@@ -26,7 +26,6 @@ class AudioPage:
                 "",
                 "Word Document (*.docx)"
             )
-            # Ensure .docx extension
             if output_file and not output_file.lower().endswith(".docx"):
                 output_file = output_file + ".docx"
 
@@ -38,7 +37,6 @@ class AudioPage:
                 label.setText("노트 생성 중...")
             self.ui.audio_note_btn.setEnabled(False)
 
-            # Thread & Worker
             self.thread = QThread()
             self.worker = AudioWorker(self.client, path, output_file)
             self.worker.moveToThread(self.thread)

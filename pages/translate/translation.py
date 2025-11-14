@@ -5,10 +5,6 @@ from workers.translate_worker import TranslateWorker
 
 class TranslatePage:
     def __init__(self, ui, client):
-        """
-        ui: main_window_ui.py에서 만든 self.ui 전체
-        client: main.py에서 전달한 OpenAI client
-        """
         self.ui = ui
         self.client = client
 
