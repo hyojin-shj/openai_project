@@ -1,1 +1,10 @@
-[openai_project_심효진.pdf](https://github.com/user-attachments/files/23539264/openai_project_.pdf)
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/6116e060-1c50-4ae2-91c1-693922b956f2" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/93b25966-3946-408e-b4fe-bd66a185ecc3" />
+<img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/f897597e-5c7a-4ee5-800a-e87440f91691" />
+<img width="1920" height="1080" alt="4" src="https://github.com/user-attachments/assets/89d66a73-d783-498e-99b0-9bd00ddd1f9f" />
+<img width="1920" height="1080" alt="5" src="https://github.com/user-attachments/assets/cb3ab38c-9f39-4fdb-bff6-4d5ddc2ff4ed" />
+<img width="1920" height="1080" alt="6" src="https://github.com/user-attachments/assets/614b6bde-e462-4def-8348-9f165a54cf7a" />
+<img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/4b389c03-c115-4dea-b3ab-7e6130759374" />
+<img width="1920" height="1080" alt="8" src="https://github.com/user-attachments/assets/1bafaabd-0533-4edc-b0b1-3ee500b506d7" />
+<img width="1920" height="1080" alt="9" src="https://github.com/user-attachments/assets/62d93cdb-ce43-4291-ada6-c83c38c40423" />
+<img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/3bc087c6-317a-47f8-b4fc-571800abdc21" />
